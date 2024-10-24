@@ -1,0 +1,6 @@
+#footerTxt {
+    height: 50px;
+    background: linear-gradient(180deg, rgba(22, 138, 204, 1) 0%, rgba(24, 110, 202, 1) 79%, rgba(27, 81, 200, 1) 100%);
+    padding-top: 10px;
+    color: white;
+}
