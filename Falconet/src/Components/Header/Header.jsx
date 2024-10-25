@@ -2,10 +2,28 @@ import falconetLogo from '../../assets/falconetLogo.png';
 import './Header.css';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
 
 function Header({Link1, router1, Link2, router2, Link3, router3, Link4, router4}) {
+        const [scrolled, setScrolled] = useState(false);
+
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        useEffect(() => {
+            window.addEventListener("scroll", handleScroll);
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
+        }, []);
+
     return (
-        <div id="header">
+        <div className="header" id={scrolled ? "header" : "headerNotScrolled"}>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <img id="logo" src={falconetLogo} alt="falconetLogo"/>
@@ -54,4 +72,5 @@ Header.propTypes = {
     Link4: PropTypes.string,
     router4: PropTypes.string,
 };
+
 export default Header;
