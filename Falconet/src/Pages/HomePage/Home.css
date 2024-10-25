@@ -75,3 +75,20 @@
     font-family: 'Rubik', sans-serif !important;
     font-weight: bold;
 }
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+#home .rotate {
+    animation: rotate 10s linear infinite;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}

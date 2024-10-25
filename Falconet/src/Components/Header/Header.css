@@ -1,4 +1,4 @@
-#header .navbar ,#headerNotScrolled .navbar{
+#header .navbar, #headerNotScrolled .navbar {
     padding: 0 10px;
     height: 80px;
     background: linear-gradient(90deg, rgba(17, 53, 131, 1) 0%, rgba(24, 73, 180, 1) 37%, rgba(27, 81, 200, 1) 66%, rgba(36, 19, 111, 1) 100%);
@@ -8,29 +8,29 @@
 
 }
 
-#header #logo ,#headerNotScrolled #logo{
+#header #logo, #headerNotScrolled #logo {
     width: 100px !important;
     height: 100px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#header #logo:hover ,#headerNotScrolled #logo:hover{
+#header #logo:hover, #headerNotScrolled #logo:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-#header #navbarSupportedContent .navbar-nav ,#headerNotScrolled #navbarSupportedContent .navbar-nav{
+#header #navbarSupportedContent .navbar-nav, #headerNotScrolled #navbarSupportedContent .navbar-nav {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-#header #navbarSupportedContent .nav-item ,#headerNotScrolled #navbarSupportedContent .nav-item {
+#header #navbarSupportedContent .nav-item, #headerNotScrolled #navbarSupportedContent .nav-item {
     margin: 0 10px;
     position: relative;
 }
 
-#header #navbarSupportedContent .nav-item a ,#headerNotScrolled  #navbarSupportedContent .nav-item a {
+#header #navbarSupportedContent .nav-item a, #headerNotScrolled #navbarSupportedContent .nav-item a {
     color: white !important;
     text-decoration: none;
     padding: 5px 10px;
@@ -38,12 +38,12 @@
     position: relative;
 }
 
-#header #navbarSupportedContent .nav-item a:hover ,#headerNotScrolled #navbarSupportedContent .nav-item a:hover{
+#header #navbarSupportedContent .nav-item a:hover, #headerNotScrolled #navbarSupportedContent .nav-item a:hover {
     color: #ffdd57 !important;
     border-bottom: 2px solid #ffdd57;
 }
 
-#header #navbarSupportedContent .nav-item a::before,#headerNotScrolled #navbarSupportedContent .nav-item a::before{
+#header #navbarSupportedContent .nav-item a::before, #headerNotScrolled #navbarSupportedContent .nav-item a::before {
     content: '';
     position: absolute;
     left: 0;
@@ -54,11 +54,11 @@
     transition: width 0.3s ease;
 }
 
-#header #navbarSupportedContent .nav-item a:hover::before ,#headerNotScrolled #navbarSupportedContent .nav-item a:hover::before{
+#header #navbarSupportedContent .nav-item a:hover::before, #headerNotScrolled #navbarSupportedContent .nav-item a:hover::before {
     width: 100%;
 }
 
-#header #contactNow ,#headerNotScrolled #contactNow {
+#header #contactNow, #headerNotScrolled #contactNow {
     white-space: nowrap;
     padding: 5px 30px;
     font-size: 16px;
@@ -72,9 +72,10 @@
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
     margin-right: 20px;
+    min-width: 170px !important;
 }
 
-#header #contactNow::before ,#headerNotScrolled #contactNow::before{
+#header #contactNow::before, #headerNotScrolled #contactNow::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -88,14 +89,14 @@
     transform: translate(-50%, -50%);
 }
 
-#header #contactNow:hover::before ,#headerNotScrolled #contactNow:hover::before{
+#header #contactNow:hover::before, #headerNotScrolled #contactNow:hover::before {
     width: 120%;
     height: 120%;
     top: 50%;
     left: 50%;
 }
 
-#header #contactNow:hover ,#headerNotScrolled  #contactNow:hover{
+#header #contactNow:hover, #headerNotScrolled #contactNow:hover {
     background: linear-gradient(90deg, #0f6fa1, #1eb3e8);
     color: #ffdd57;
     border: 2px solid #1eb3e8;
@@ -103,13 +104,13 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-#header #contactNow:active ,#headerNotScrolled #contactNow:active{
+#header #contactNow:active, #headerNotScrolled #contactNow:active {
     transform: scale(1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#headerNotScrolled .navbar{
-        background: none !important;
-        transition: background-color 0.5s ease !important;
+#headerNotScrolled .navbar {
+    background: none !important;
+    transition: background-color 0.5s ease !important;
 
-    }
+}

@@ -2,7 +2,8 @@ import falconetLogo from '../../assets/falconetLogo.png';
 import './Header.css';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import Typed from "typed.js";
 
 function Header({Link1, router1, Link2, router2, Link3, router3, Link4, router4}) {
         const [scrolled, setScrolled] = useState(false);
@@ -21,6 +22,22 @@ function Header({Link1, router1, Link2, router2, Link3, router3, Link4, router4}
                 window.removeEventListener("scroll", handleScroll);
             };
         }, []);
+
+    useEffect(() => {
+        const options = {
+            strings: ['Contact Now'],
+            typeSpeed: 70,
+            backSpeed: 70,
+            backDelay: 1000,
+            loop: true,
+        };
+
+        const typed = new Typed('#contactNow', options);
+
+        return () => {
+            typed.destroy();
+        };
+    }, []);
 
     return (
         <div className="header" id={scrolled ? "header" : "headerNotScrolled"}>
@@ -52,7 +69,7 @@ function Header({Link1, router1, Link2, router2, Link3, router3, Link4, router4}
                         </ul>
                         <form className="d-flex" role="search">
                             <button id="contactNow" className="btn btn-outline-success" type="submit">
-                                Contact Now
+
                             </button>
                         </form>
                     </div>

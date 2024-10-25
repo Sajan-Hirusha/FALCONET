@@ -4,3 +4,30 @@
     padding-top: 10px;
     color: white;
 }
+#footer .row{
+    box-shadow: 0 -10px 40px rgba(138, 146, 149, 0.79);
+
+}
+#footer #section01 #logo{
+    width: 120px;
+    height: 100px;
+
+}
+#footer #section01 {
+    position: relative;
+    left: 20%;
+   padding-bottom: 40px;
+}
+#footer #section02 ,#footer #section03{
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+#footer #section01  p{
+    text-align: justify;
+}
+#footer #section01 img{
+    width: 30px;
+    height: 30px;
+    margin:5px;
+}
