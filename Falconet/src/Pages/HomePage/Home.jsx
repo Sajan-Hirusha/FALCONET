@@ -4,6 +4,7 @@ import './Home.css';
 import AboutImage from '../../assets/about us.png';
 import ScrollReveal from "scrollreveal";
 import {useEffect} from "react";
+import ServicesPanel from "../../Components/Services/ServicesPanel.jsx";
 
 function Home() {
     useEffect(() => {
@@ -16,6 +17,7 @@ function Home() {
         sr.reveal('#section01, #section02, #section03 ,#homeContactNow', { origin: 'bottom' });
         sr.reveal('#homeMiddle h1, #homeMiddle .row', { origin: 'left' });
         sr.reveal('.p1, .p2, .p3, .p4, #homeMiddle h5', { origin: 'right' });
+        sr.reveal('#serviceSection h5, #serviceSection h1', { origin: 'right' });
 
     }, []);
 
@@ -62,6 +64,15 @@ function Home() {
                         />
                     </div>
                 </div>
+            </div>
+            <div id="serviceSection">
+                <h5 id="ourServices" className="d-flex justify-content-center">
+                    SERVICES
+                </h5>
+                <h1 className="d-flex justify-content-center">
+                    What We Do
+                </h1>
+                <ServicesPanel />
             </div>
             <Footer />
         </div>
