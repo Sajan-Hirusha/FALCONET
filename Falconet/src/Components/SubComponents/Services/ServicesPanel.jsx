@@ -1,6 +1,6 @@
 import React from 'react'
 import ServiceCardComponent from './ServiceCardComponent'
-import falconetLogo from '../../assets/falconetLogo.png';
+import falconetLogo from '../../../assets/falconetLogo.png';
 
 function ServicesPanel() {
     const serviceCardSet = [

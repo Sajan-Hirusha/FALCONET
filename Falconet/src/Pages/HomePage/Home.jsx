@@ -4,7 +4,7 @@ import './Home.css';
 import AboutImage from '../../assets/about us.png';
 import ScrollReveal from "scrollreveal";
 import {useEffect} from "react";
-import ServicesPanel from "../../Components/Services/ServicesPanel.jsx";
+import ServicesPanel from "../../Components/SubComponents/Services/ServicesPanel.jsx";
 
 function Home() {
     useEffect(() => {
