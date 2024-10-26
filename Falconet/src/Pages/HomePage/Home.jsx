@@ -5,6 +5,7 @@ import AboutImage from '../../assets/about us.png';
 import ScrollReveal from "scrollreveal";
 import {useEffect} from "react";
 import ServicesPanel from "../../Components/SubComponents/Services/ServicesPanel.jsx";
+import ContactUsForm from "../../Components/SubComponents/ContactUsForm.jsx";
 
 function Home() {
     useEffect(() => {
@@ -18,6 +19,7 @@ function Home() {
         sr.reveal('#homeMiddle h1, #homeMiddle .row', { origin: 'left' });
         sr.reveal('.p1, .p2, .p3, .p4, #homeMiddle h5', { origin: 'right' });
         sr.reveal('#serviceSection h5, #serviceSection h1', { origin: 'right' });
+        sr.reveal('#contactUs-h5, #contactUs1-h1', { origin: 'left' });
 
     }, []);
 
@@ -38,7 +40,7 @@ function Home() {
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br />
                         nisi ut aliquip.</p><br />
-                    <button id="homeContactNow" type="button" className="btn btn-primary">Contact Now</button>
+                    <button id="homeContactNow" type="button" className="btn btn-primary"><a href="#contactUsSection">Contact Now</a></button>
                 </div>
             </div>
             <div id="homeMiddle">
@@ -73,6 +75,16 @@ function Home() {
                     What We Do
                 </h1>
                 <ServicesPanel />
+            </div>
+            <div id="contactUsSection">
+                <h5 id="contactUs-h5" className="d-flex justify-content-center">
+                    Contact
+                </h5>
+                <h1 id="contactUs1-h1" className="d-flex justify-content-center">
+                    Feel free to &nbsp;<span id="contactus-h1">Contact US</span>
+                </h1>
+                <br />
+                <ContactUsForm />
             </div>
             <Footer />
         </div>
