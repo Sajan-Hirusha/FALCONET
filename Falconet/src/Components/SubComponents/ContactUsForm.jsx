@@ -21,8 +21,9 @@ function handleOnChange(e){
 }
 
   return (
-    <div className='d-flex'>
-        <div className='col-5'>
+    <div className='container'>
+        <div className='row d-flex'>
+        <div className='col-lg-5 col-sm-12'>
             <div style={{
                 backgroundColor:'rgb(22,138,204)',
                 borderRadius:'0 10px 10px 0',
@@ -44,12 +45,12 @@ function handleOnChange(e){
                 </div>
             </div>
         </div>
-        <div className='col-7 ml-1'>
+        <div className='col-lg-7 col-sm-12 ml-1'>
             <h5 className='get-in-touch'>Get in Touch</h5>
             <p>Any question or remarks? Let us know!</p>
-            <form className="row g-3 needs-validation" novalidate>
+            <form className="row g-3 needs-validation" noValidate>
                 <div className="col-12">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-11">
                         <input type="text" className="form-control" id="validationCustom01" name='name' value={formData.name} placeholder='John' onChange={handleOnChange} required/>
                         <div className="valid-feedback">    
                         Looks good!
@@ -60,7 +61,7 @@ function handleOnChange(e){
                     </div>
                 </div>
                 <div className="col-12">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-11">
                         <input type="text" className="form-control" id="validationCustom01" name='phone' value={formData.phone} placeholder='07X XXX XXXX' onChange={handleOnChange} required />
                         <div className="valid-feedback">
                         Looks good!
@@ -71,7 +72,7 @@ function handleOnChange(e){
                     </div>
                 </div>
                 <div className="col-12">
-                    <div className="col-6">
+                    <div className="col-lg-6 col-md-11">
                         <input type="text" className="form-control" id="validationCustom01" name='email' value={formData.email} placeholder='john@gmail.com' onChange={handleOnChange} required />
                         <div className="valid-feedback">
                         Looks good!
@@ -110,7 +111,7 @@ function handleOnChange(e){
                     font-weight:bold;  
                 }
                 .contact-items p{
-                    margin-left:120px;  
+                    margin-left:10%;  
                 }
                 .contact-submitBtn:hover {
                     background-color: rgb(11, 107, 162);
@@ -120,6 +121,7 @@ function handleOnChange(e){
                 }
             `}</style>
         </div>
+    </div>
     </div>
   )
 }

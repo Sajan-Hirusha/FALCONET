@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function ServiceCardComponent({imgUrl,mainTitle,subTitle,childPageRoute}) {
+function ServiceCardComponent({imgUrl,mainTitle,subTitle,idnum}) {
   return (
         <div style={{
         backgroundImage:`url(${imgUrl})`,
@@ -10,13 +10,13 @@ function ServiceCardComponent({imgUrl,mainTitle,subTitle,childPageRoute}) {
         backgroundRepeat: 'no-repeat',
         cursor:'pointer',
         borderRadius:'15px',
-        width:'30%',
+        
         height:'250px',
         margin:'15px',
         transition: 'transform 0.3s ease',
-        }} className='service-card'><Link to={childPageRoute} style={{ textDecoration: 'none',color:'black' }}>
+        }} className='service-card col-md-5 col-lg-3 col-sm-10' data-bs-toggle="modal" data-bs-target={`#staticBackdrop${idnum}`}>
             <div style={{
-                height:'60%'
+                height:'60%',
             }} className='col-12'>
             </div>
             <div className='d-flex justify-content-center'>
@@ -26,7 +26,7 @@ function ServiceCardComponent({imgUrl,mainTitle,subTitle,childPageRoute}) {
                     borderRadius:'15px',
                     padding:'5px',
                     margin:'10px',
-                    width:'90%'
+                    width:'90%',
                 }} className='col-12 d-flex justify-content-center'>
                     <div className='col-10'>
                         <h5>{mainTitle}</h5>
@@ -46,7 +46,6 @@ function ServiceCardComponent({imgUrl,mainTitle,subTitle,childPageRoute}) {
                     text-decoration:none;
                 }
             `}</style>
-            </Link>
         </div>
     
   )
