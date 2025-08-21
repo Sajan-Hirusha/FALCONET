@@ -1,0 +1,127 @@
+#homeHeader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../assets/homeHeader.png');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 100 !important;
+}
+
+#homeHeader #homeHeaderTxt {
+    position: relative;
+    top: 30%;
+    left: 5%;
+    color: white;
+}
+
+#homeHeader #homeHeaderTxt .p1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#homeHeader #homeHeaderTxt .p2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#homeHeader #homeHeaderTxt .p3 {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+#homeHeader #homeHeaderTxt .p4 {
+    font-size: 17px;
+}
+
+#homeHeader #homeHeaderTxt p {
+    line-height: 1.2;
+}
+
+#homeHeader #homeHeaderTxt button {
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+#home #homeMiddle {
+    text-align: center;
+    margin-top:100px;
+}
+
+#home #homeMiddle .row {
+    text-align: justify;
+    background-color: #e1f0f8;
+    margin: 60px 40px;
+    border-radius: 10px;
+    padding: 40px 20px  !important;
+}
+
+#home #homeMiddle .row div {
+    position: relative;
+    left: 5%;
+    margin-left: 20px;
+}
+
+#aboutFalconet{
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c8ce9;
+}
+#home #homeMiddle h5{
+    color: #168acc;
+    font-family: 'Rubik', sans-serif !important;
+}
+#serviceSection h1{
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+}
+
+#ourServices{
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c8ce9;
+}
+#home #homeMiddle h1{
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+}
+#contactUs{
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c8ce9;
+}
+#contactUsSection h1{
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+}
+#contactus-h1{
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: bold;
+    color: #0c8ce9;
+}
+#homeContactNow a{
+    text-decoration: none;
+}
+#serviceSection{
+    margin-bottom: 50px;
+}
+#contactUsSection{
+    margin-bottom: 50px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+#home .rotate {
+    animation: rotate 10s linear infinite;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}

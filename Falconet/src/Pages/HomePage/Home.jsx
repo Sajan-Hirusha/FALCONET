@@ -1,0 +1,94 @@
+import Header from "../../Components/Header/Header.jsx";
+import Footer from "../../Components/Footer/Footer.jsx";
+import './Home.css';
+import AboutImage from '../../assets/about us.png';
+import ScrollReveal from "scrollreveal";
+import {useEffect} from "react";
+import ServicesPanel from "../../Components/SubComponents/Services/ServicesPanel.jsx";
+import ContactUsForm from "../../Components/SubComponents/ContactUsForm.jsx";
+
+function Home() {
+    useEffect(() => {
+        const sr = ScrollReveal({
+            distance: '80px',
+            duration: 2000,
+            delay: 200,
+        });
+
+        sr.reveal('#section01, #section02, #section03 ,#homeContactNow', { origin: 'bottom' });
+        sr.reveal('#homeMiddle h1, #homeMiddle .row', { origin: 'left' });
+        sr.reveal('.p1, .p2, .p3, .p4, #homeMiddle h5', { origin: 'right' });
+        sr.reveal('#serviceSection h5, #serviceSection h1', { origin: 'right' });
+        sr.reveal('#contactUs-h5, #contactUs1-h1', { origin: 'left' });
+
+    }, []);
+
+    return (
+        <div id="home">
+            <Header
+                router1={"/"} Link1={"Home"}
+                router2={"#aboutUs"} Link2={"About"}
+                router3={"#services"} Link3={"Services"}
+            />
+
+            <div id="homeHeader">
+                <div id="homeHeaderTxt">
+                    <p className="p1">Hi, We are</p>
+                    <p className="p2">FALCONET</p>
+                    <p className="p3">some text</p>
+                    <p className="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br />
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br />
+                        nisi ut aliquip.</p><br />
+                    <button id="homeContactNow" type="button" className="btn btn-primary"><a href="#contactUsSection">Contact Now</a></button>
+                </div>
+            </div>
+            <div id="homeMiddle">
+                <h5>ABOUT US</h5>
+                <h1>Get to know Us Better</h1>
+                <div className="row">
+                    <div className="firstDiv col-md-6">
+                        <br /><br /><br />
+                        At &nbsp; <span id="aboutFalconet">FALCONET</span>,
+                        <p>we are a dynamic and innovative team dedicated to providing top-tier
+                            technology solutions. Our expertise spans across various domains, allowing us
+                            to tackle projects of any scale with precision and creativity.</p>
+                        <br />
+                        <p>We pride ourselves on being problem solvers, crafting solutions that are not only functional but also efficient and forward-thinking.
+                            With a focus on delivering high-quality results, we work closely with our clients to understand their needs and transform their ideas into reality. Our team of experts ensures that each project is handled with the utmost professionalism, from concept to completion.
+                            At FALCONET, we don’t just complete projects – we build lasting partnerships, ensuring that our solutions continue to deliver value long after they’re implemented.</p>
+                    </div>
+                    <div className="col-md-4 ms-5">
+                        <img
+                            src={AboutImage}
+                            alt="aboutUsImg"
+                            className="rotate"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div id="serviceSection">
+                <h5 id="ourServices" className="d-flex justify-content-center">
+                    SERVICES
+                </h5>
+                <h1 className="d-flex justify-content-center">
+                    What We Do
+                </h1>
+                <ServicesPanel />
+            </div>
+            <div id="contactUsSection">
+                <h5 id="contactUs-h5" className="d-flex justify-content-center">
+                    Contact
+                </h5>
+                <h1 id="contactUs1-h1" className="d-flex justify-content-center">
+                    Feel free to &nbsp;<span id="contactus-h1">Contact US</span>
+                </h1>
+                <br />
+                <ContactUsForm />
+            </div>
+            <Footer />
+        </div>
+    );
+}
+
+export default Home;
